@@ -1,0 +1,28 @@
+.card{
+    width: 250px;
+    height: 200px;
+    padding: 10px;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: rgb(160, 160, 160);
+}
+.category-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.main-category-container{
+    background-color: rgb(72, 72, 72);
+
+}
+.category-title{
+    color: white;
+    font-size:45px;
+    font-weight: bold;
+
+}

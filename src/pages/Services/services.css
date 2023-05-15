@@ -1,0 +1,43 @@
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .service-card {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+
+  .service-card h2 {
+    margin-top: 0;
+  }
+  
+  .service-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .service-card li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .post-container{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+  }
+  .items{
+    margin-top: 7px;
+    padding:10px;
+  }

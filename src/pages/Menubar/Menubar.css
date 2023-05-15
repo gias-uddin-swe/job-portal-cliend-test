@@ -1,0 +1,27 @@
+.Menubar-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #212529;
+    color:white !important;
+}
+.menu-container{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+.menu-container li{
+    margin-right: 10px;
+    font-size:18px;
+    color: white;
+    list-style: none;
+    
+}
+.logo{
+    width: 60px;
+}
+.menu-item{
+    text-decoration: none !important;
+    padding-top: 10px;
+}

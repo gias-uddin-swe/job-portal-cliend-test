@@ -1,0 +1,27 @@
+.add-job-container{
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.text-input{
+    border: none;
+    padding: 15px;
+    margin: 5px;
+}
+.submit-btn{
+    width: 60%;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(33, 33, 115);
+    color: white;
+    font-size:18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    border-radius: 2px;
+}
+.submit-btn:hover{
+    background-color: rgb(25, 25, 193);
+}
