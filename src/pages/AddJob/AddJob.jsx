@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./AddJob.css";
 import CreatableSelect from "react-select/creatable";
+import Select from "react-select";
 import { AuthContext } from "../../provider/AuthProvider";
 const AddJob = () => {
   const { user } = useContext(AuthContext);
@@ -14,10 +15,11 @@ const AddJob = () => {
     watch,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
     data.skills = selectedOption;
-
-    fetch("http://localhost:5000/post-job", {
+    
+    fetch("http://localhost:5000/postJob", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -28,6 +30,8 @@ const AddJob = () => {
       });
     console.log(data);
   };
+
+  // console.log(selectedOption);
   const options = [
     { value: "JavaScript", label: "JavaScript" },
     { value: "C++", label: "C++" },
@@ -38,7 +42,7 @@ const AddJob = () => {
     { value: "MongoDB", label: "MongoDB" },
     { value: "Redux", label: "Redux" },
   ];
-//   console.log(user);
+  //   console.log(user);
   return (
     <div className="add-job-container">
       <div className="add-job row">
@@ -51,7 +55,6 @@ const AddJob = () => {
               placeholder="title"
               defaultValue="Web developer"
             />
-
             <input
               className="text-input"
               {...register("salary", { required: true })}
@@ -70,6 +73,7 @@ const AddJob = () => {
               <option value="writer">Writer</option>
               <option value="Developer">Developer</option>
             </select>
+
             <select className="text-input" {...register("status")}>
               <option value="remote">Remote</option>
               <option value="offline">Offline</option>
@@ -101,6 +105,13 @@ const AddJob = () => {
               options={options}
               isMulti
             />
+
+            {/* <Select
+              defaultValue={selectedOption}
+              onChange={setSelectedOption}
+              options={options}
+              isMulti
+            /> */}
             <input
               className="text-input"
               {...register("description")}
@@ -109,6 +120,7 @@ const AddJob = () => {
             <input className="submit-btn" value="Post Job" type="submit" />
           </form>
         </div>
+
         <div className="col-md-4">
           <img
             className="w-100"
